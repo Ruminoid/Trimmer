@@ -115,6 +115,14 @@
       <Project>{7f898b3a-da17-4cab-b387-5629b5faca49}</Project>
       <Name>RetroRadiance</Name>
     </ProjectReference>
+    <ProjectReference Include="..\HeavyWork\VisualIcon\VisualIcon\VisualIcon.csproj">
+      <Project>{04dbbef4-f422-4973-8eaa-11c15e09b7de}</Project>
+      <Name>VisualIcon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HeavyWork\YDock\YDock\YDock.csproj">
+      <Project>{2bd226e4-b931-4b46-a6c3-d15270ad0565}</Project>
+      <Name>YDock</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
