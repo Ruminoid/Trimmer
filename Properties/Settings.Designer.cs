@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Ruminoid.Trimmer.Shell.Properties
+namespace Ruminoid.Trimmer.Properties
 {
 
 
