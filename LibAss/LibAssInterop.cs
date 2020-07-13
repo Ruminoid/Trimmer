@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ruminoid.Trimmer.Shell.LibAss
+namespace Ruminoid.Trimmer.LibAss
 {
     [StructLayout(LayoutKind.Sequential)]
     public struct ASS_Style
