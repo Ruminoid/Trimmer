@@ -15,6 +15,6 @@
              SnapsToDevicePixels="True"
              Name="RootElement">
     <Grid>
-        <ffme:MediaElement x:Name="VideoElement" Background="Gray" LoadedBehavior="Play" UnloadedBehavior="Manual" />
+        <ffme:MediaElement x:Name="VideoElement" Background="Transparent" LoadedBehavior="Play" UnloadedBehavior="Manual" />
     </Grid>
 </UserControl>
