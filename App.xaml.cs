@@ -47,7 +47,7 @@ namespace Ruminoid.Trimmer
 
             Ruminoid.Trimmer.Properties.Resources.Culture = CultureInfo.CurrentUICulture;
 
-            Unosquare.FFME.Library.FFmpegDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ffmpeg") + "\\";
+            Unosquare.FFME.Library.FFmpegDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Libraries\ffmpeg") + '\\';
 
             if (MainWindow is null) MainWindow = new MainWindow();
             MainWindow.Show();
