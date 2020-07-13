@@ -22,7 +22,7 @@
         SnapsToDevicePixels="True" Height="720" Width="1280"
         Title="Trimmer"
         MinHeight="720" MinWidth="1280" WindowStartupLocation="CenterScreen"
-        Icon="/Ruminoid.Trimmer.Shell;component/Assets/logo_v1.ico"
+        Icon="/Ruminoid.Trimmer;component/Assets/Ruminoid.Trimmer.Colored.Transparent.ico"
         Name="RootElement"
         PreviewKeyDown="MainWindow_OnPreviewKeyDown"
         PreviewKeyUp="MainWindow_OnPreviewKeyUp">
@@ -50,7 +50,7 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <controls:CaptionIcon x:Name="Wnd1" Grid.Column="0" Padding="8,6,4,6" VerticalAlignment="Center">
-                    <visualIcon:Icon Width="20" Height="20" Type="Assembly" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Image Height="20" Width="20" Source="../Assets/Ruminoid.Trimmer.Half.Transparent.png"/>
                 </controls:CaptionIcon>
                 <Menu x:Name="Wnd2" Grid.Column="1" Background="{x:Null}" Foreground="White"
                       VerticalAlignment="Center" HorizontalAlignment="Left">
