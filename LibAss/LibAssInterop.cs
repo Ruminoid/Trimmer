@@ -265,76 +265,76 @@ namespace Ruminoid.Trimmer.Shell.LibAss
             IntPtr ptr);
 
         /// Return Type: int
-        [DllImport("libass.dll", EntryPoint = "ass_library_version")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_library_version")]
         public static extern int ass_library_version();
 
         /// Return Type: ASS_Library*
-        [DllImport("libass.dll", EntryPoint = "ass_library_init")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_library_init")]
         public static extern IntPtr ass_library_init();
 
         /// Return Type: void
         ///priv: ASS_Library*
-        [DllImport("libass.dll", EntryPoint = "ass_library_done")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_library_done")]
         public static extern void ass_library_done(IntPtr priv);
 
         /// Return Type: void
         ///priv: ASS_Library*
         ///fonts_dir: char*
-        [DllImport("libass.dll", EntryPoint = "ass_set_fonts_dir")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_set_fonts_dir")]
         public static extern void ass_set_fonts_dir(IntPtr priv, [In()] [MarshalAs(UnmanagedType.LPStr)] string fonts_dir);
 
         /// Return Type: void
         ///priv: ASS_Library*
         ///extract: int
-        [DllImport("libass.dll", EntryPoint = "ass_set_extract_fonts")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_set_extract_fonts")]
         public static extern void ass_set_extract_fonts(IntPtr priv, int extract);
 
         /// Return Type: void
         ///priv: ASS_Library*
         ///list: char**
-        [DllImport("libass.dll", EntryPoint = "ass_set_style_overrides")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_set_style_overrides")]
         public static extern void ass_set_style_overrides(IntPtr priv, ref IntPtr list);
 
         /// Return Type: void
         ///track: ASS_Track*
-        [DllImport("libass.dll", EntryPoint = "ass_process_force_style")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_process_force_style")]
         public static extern void ass_process_force_style(ref ASS_Track track);
 
         /// Return Type: void
         ///priv: ASS_Library*
         ///msg_cb: Anonymous_0c9adf70_369b_4f1a_88c2_a8f7d911137f
         ///data: void*
-        [DllImport("libass.dll", EntryPoint = "ass_set_message_cb")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_set_message_cb")]
         public static extern void ass_set_message_cb(IntPtr priv, ASS_MessageCallback msg_cb, IntPtr data);
 
         /// Return Type: ASS_Renderer*
         ///param0: ASS_Library*
-        [DllImport("libass.dll", EntryPoint = "ass_renderer_init")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_renderer_init")]
         public static extern IntPtr ass_renderer_init(IntPtr param0);
 
         /// Return Type: void
         ///priv: ASS_Renderer*
-        [DllImport("libass.dll", EntryPoint = "ass_renderer_done")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_renderer_done")]
         public static extern void ass_renderer_done(IntPtr priv);
 
         /// Return Type: void
         ///priv: ASS_Renderer*
         ///w: int
         ///h: int
-        [DllImport("libass.dll", EntryPoint = "ass_set_frame_size")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_set_frame_size")]
         public static extern void ass_set_frame_size(IntPtr priv, int w, int h);
 
         /// Return Type: void
         ///priv: ASS_Renderer*
         ///w: int
         ///h: int
-        [DllImport("libass.dll", EntryPoint = "ass_set_storage_size")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_set_storage_size")]
         public static extern void ass_set_storage_size(IntPtr priv, int w, int h);
 
         /// Return Type: void
         ///priv: ASS_Renderer*
         ///level: ASS_ShapingLevel->Anonymous_baa04d3c_3af5_4409_8d1b_fe9fa5c59620
-        [DllImport("libass.dll", EntryPoint = "ass_set_shaper")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_set_shaper")]
         public static extern void ass_set_shaper(IntPtr priv, ASS_ShapingLevel level);
 
         /// Return Type: void
@@ -343,57 +343,57 @@ namespace Ruminoid.Trimmer.Shell.LibAss
         ///b: int
         ///l: int
         ///r: int
-        [DllImport("libass.dll", EntryPoint = "ass_set_margins")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_set_margins")]
         public static extern void ass_set_margins(IntPtr priv, int t, int b, int l, int r);
 
         /// Return Type: void
         ///priv: ASS_Renderer*
         ///use: int
-        [DllImport("libass.dll", EntryPoint = "ass_set_use_margins")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_set_use_margins")]
         public static extern void ass_set_use_margins(IntPtr priv, int use);
 
         /// Return Type: void
         ///priv: ASS_Renderer*
         ///par: double
-        [DllImport("libass.dll", EntryPoint = "ass_set_pixel_aspect")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_set_pixel_aspect")]
         public static extern void ass_set_pixel_aspect(IntPtr priv, double par);
 
         /// Return Type: void
         ///priv: ASS_Renderer*
         ///dar: double
         ///sar: double
-        [DllImport("libass.dll", EntryPoint = "ass_set_aspect_ratio")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_set_aspect_ratio")]
         public static extern void ass_set_aspect_ratio(IntPtr priv, double dar, double sar);
 
         /// Return Type: void
         ///priv: ASS_Renderer*
         ///font_scale: double
-        [DllImport("libass.dll", EntryPoint = "ass_set_font_scale")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_set_font_scale")]
         public static extern void ass_set_font_scale(IntPtr priv, double font_scale);
 
         /// Return Type: void
         ///priv: ASS_Renderer*
         ///ht: ASS_Hinting->Anonymous_50adfa8b_d6eb_47e5_984e_6ad569cb121f
-        [DllImport("libass.dll", EntryPoint = "ass_set_hinting")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_set_hinting")]
         public static extern void ass_set_hinting(IntPtr priv, ASS_Hinting ht);
 
         /// Return Type: void
         ///priv: ASS_Renderer*
         ///line_spacing: double
-        [DllImport("libass.dll", EntryPoint = "ass_set_line_spacing")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_set_line_spacing")]
         public static extern void ass_set_line_spacing(IntPtr priv, double line_spacing);
 
         /// Return Type: void
         ///priv: ASS_Renderer*
         ///line_position: double
-        [DllImport("libass.dll", EntryPoint = "ass_set_line_position")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_set_line_position")]
         public static extern void ass_set_line_position(IntPtr priv, double line_position);
 
         /// Return Type: void
         ///priv: ASS_Library*
         ///providers: ASS_DefaultFontProvider**
         ///size: size_t*
-        [DllImport("libass.dll", EntryPoint = "ass_get_available_font_providers")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_get_available_font_providers")]
         public static extern void ass_get_available_font_providers(IntPtr priv, ref IntPtr providers, ref int size);
 
         /// Return Type: void
@@ -403,31 +403,31 @@ namespace Ruminoid.Trimmer.Shell.LibAss
         ///dfp: int
         ///config: char*
         ///update: int
-        [DllImport("libass.dll", EntryPoint = "ass_set_fonts")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_set_fonts")]
         public static extern void ass_set_fonts(IntPtr priv, IntPtr default_font, [In()] [MarshalAs(UnmanagedType.LPStr)] string default_family, int dfp, IntPtr config, int update);
 
         /// Return Type: void
         ///priv: ASS_Renderer*
         ///bits: int
-        [DllImport("libass.dll", EntryPoint = "ass_set_selective_style_override_enabled")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_set_selective_style_override_enabled")]
         public static extern void ass_set_selective_style_override_enabled(IntPtr priv, int bits);
 
         /// Return Type: void
         ///priv: ASS_Renderer*
         ///style: ASS_Style*
-        [DllImport("libass.dll", EntryPoint = "ass_set_selective_style_override")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_set_selective_style_override")]
         public static extern void ass_set_selective_style_override(IntPtr priv, ref ASS_Style style);
 
         /// Return Type: int
         ///priv: ASS_Renderer*
-        [DllImport("libass.dll", EntryPoint = "ass_fonts_update")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_fonts_update")]
         public static extern int ass_fonts_update(IntPtr priv);
 
         /// Return Type: void
         ///priv: ASS_Renderer*
         ///glyph_max: int
         ///bitmap_max_size: int
-        [DllImport("libass.dll", EntryPoint = "ass_set_cache_limits")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_set_cache_limits")]
         public static extern void ass_set_cache_limits(IntPtr priv, int glyph_max, int bitmap_max_size);
 
         /// Return Type: ASS_Image*
@@ -435,53 +435,53 @@ namespace Ruminoid.Trimmer.Shell.LibAss
         ///track: ASS_Track*
         ///now: int
         ///detect_change: int*
-        [DllImport("libass.dll", EntryPoint = "ass_render_frame")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_render_frame")]
         public static extern IntPtr ass_render_frame(IntPtr priv, IntPtr track, int now, ref int detect_change);
 
         /// Return Type: ASS_Track*
         ///param0: ASS_Library*
-        [DllImport("libass.dll", EntryPoint = "ass_new_track")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_new_track")]
         public static extern IntPtr ass_new_track(IntPtr param0);
 
         /// Return Type: void
         ///track: ASS_Track*
-        [DllImport("libass.dll", EntryPoint = "ass_free_track")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_free_track")]
         public static extern void ass_free_track(IntPtr track);
 
         /// Return Type: int
         ///track: ASS_Track*
-        [DllImport("libass.dll", EntryPoint = "ass_alloc_style")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_alloc_style")]
         public static extern int ass_alloc_style(IntPtr track);
 
         /// Return Type: int
         ///track: ASS_Track*
-        [DllImport("libass.dll", EntryPoint = "ass_alloc_event")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_alloc_event")]
         public static extern int ass_alloc_event(IntPtr track);
 
         /// Return Type: void
         ///track: ASS_Track*
         ///sid: int
-        [DllImport("libass.dll", EntryPoint = "ass_free_style")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_free_style")]
         public static extern void ass_free_style(ref ASS_Track track, int sid);
 
         /// Return Type: void
         ///track: ASS_Track*
         ///eid: int
-        [DllImport("libass.dll", EntryPoint = "ass_free_event")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_free_event")]
         public static extern void ass_free_event(ref ASS_Track track, int eid);
 
         /// Return Type: void
         ///track: ASS_Track*
         ///data: char*
         ///size: int
-        [DllImport("libass.dll", EntryPoint = "ass_process_data")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_process_data")]
         public static extern void ass_process_data(ref ASS_Track track, IntPtr data, int size);
 
         /// Return Type: void
         ///track: ASS_Track*
         ///data: char*
         ///size: int
-        [DllImport("libass.dll", EntryPoint = "ass_process_codec_private")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_process_codec_private")]
         public static extern void ass_process_codec_private(ref ASS_Track track, IntPtr data, int size);
 
         /// Return Type: void
@@ -490,25 +490,25 @@ namespace Ruminoid.Trimmer.Shell.LibAss
         ///size: int
         ///timecode: int
         ///duration: int
-        [DllImport("libass.dll", EntryPoint = "ass_process_chunk")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_process_chunk")]
         public static extern void ass_process_chunk(ref ASS_Track track, IntPtr data, int size, int timecode, int duration);
 
         /// Return Type: void
         ///track: ASS_Track*
         ///check_readorder: int
-        [DllImport("libass.dll", EntryPoint = "ass_set_check_readorder")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_set_check_readorder")]
         public static extern void ass_set_check_readorder(ref ASS_Track track, int check_readorder);
 
         /// Return Type: void
         ///track: ASS_Track*
-        [DllImport("libass.dll", EntryPoint = "ass_flush_events")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_flush_events")]
         public static extern void ass_flush_events(ref ASS_Track track);
 
         /// Return Type: ASS_Track*
         ///library: ASS_Library*
         ///fname: char*
         ///codepage: char*
-        [DllImport("libass.dll", EntryPoint = "ass_read_file")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_read_file")]
         public static extern IntPtr ass_read_file(IntPtr library, IntPtr fname, IntPtr codepage);
 
         /// Return Type: ASS_Track*
@@ -516,14 +516,14 @@ namespace Ruminoid.Trimmer.Shell.LibAss
         ///buf: char*
         ///bufsize: size_t->int
         ///codepage: char*
-        [DllImport("libass.dll", EntryPoint = "ass_read_memory")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_read_memory")]
         public static extern IntPtr ass_read_memory(IntPtr library, IntPtr buf, int bufsize, IntPtr codepage);
 
         /// Return Type: int
         ///track: ASS_Track*
         ///fname: char*
         ///codepage: char*
-        [DllImport("libass.dll", EntryPoint = "ass_read_styles")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_read_styles")]
         public static extern int ass_read_styles(ref ASS_Track track, IntPtr fname, IntPtr codepage);
 
         /// Return Type: void
@@ -531,19 +531,19 @@ namespace Ruminoid.Trimmer.Shell.LibAss
         ///name: char*
         ///data: char*
         ///data_size: int
-        [DllImport("libass.dll", EntryPoint = "ass_add_font")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_add_font")]
         public static extern void ass_add_font(IntPtr library, IntPtr name, IntPtr data, int data_size);
 
         /// Return Type: void
         ///library: ASS_Library*
-        [DllImport("libass.dll", EntryPoint = "ass_clear_fonts")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_clear_fonts")]
         public static extern void ass_clear_fonts(IntPtr library);
 
         /// Return Type: int
         ///track: ASS_Track*
         ///now: int
         ///movement: int
-        [DllImport("libass.dll", EntryPoint = "ass_step_sub")]
+        [DllImport("Libraries/libass.dll", EntryPoint = "ass_step_sub")]
         public static extern int ass_step_sub(ref ASS_Track track, int now, int movement);
     }
 }
