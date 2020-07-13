@@ -107,12 +107,12 @@ namespace Ruminoid.Trimmer.Windows
             _updating = true;
             Task.Factory.StartNew(async () =>
             {
-                using (var mgr = new UpdateManager("https://ruminoid.vbox.moe/res/trimmer/releases"))
-                {
-                    await mgr.UpdateApp();
-                    Application.Current.Dispatcher?.Invoke(() =>
-                        _updating = false);
-                }
+                //using (var mgr = new UpdateManager("https://ruminoid.vbox.moe/res/trimmer/releases"))
+                //{
+                //    await mgr.UpdateApp();
+                //    Application.Current.Dispatcher?.Invoke(() =>
+                //        _updating = false);
+                //}
             });
         }
 
