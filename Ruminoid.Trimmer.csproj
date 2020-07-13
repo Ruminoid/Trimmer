@@ -219,7 +219,6 @@
       <Name>YDock</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\SkipData.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
