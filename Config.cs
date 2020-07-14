@@ -14,6 +14,12 @@ namespace Ruminoid.Trimmer
     [JsonObject(MemberSerialization.OptIn)]
     public class Config : INotifyPropertyChanged
     {
+        #region Current
+
+        public static Config Current { get; set; } = ConfigHelper<Config>.OpenConfig();
+
+        #endregion
+
         #region MainWindow
 
         [JsonProperty]
