@@ -7,7 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Ruminoid.Trimmer.LibAss;
 using Unosquare.FFME.Common;
-using static Ruminoid.Trimmer.LibAss.LibASSInterop;
+using Ruminoid.Common.Renderer.LibAss;
+using static Ruminoid.Common.Renderer.LibAss.LibASSInterop;
 
 namespace Ruminoid.Trimmer.LibAss
 {
