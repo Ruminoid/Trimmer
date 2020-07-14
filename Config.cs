@@ -5,29 +5,18 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Ruminoid.Common.Helpers;
 
 namespace Ruminoid.Trimmer
 {
+    [RuminoidProduct("Trimmer")]
+    [JsonObject(MemberSerialization.OptIn)]
     public class Config : INotifyPropertyChanged
     {
-        #region ExportConfig
-
-        private bool exportAverageWords;
-
-        public bool ExportAverageWords
-        {
-            get => exportAverageWords;
-            set
-            {
-                exportAverageWords = value;
-                OnPropertyChanged();
-            }
-        }
-
-        #endregion
-
         #region MainWindow
 
+        [JsonProperty]
         private bool hideWelcome;
 
         public bool HideWelcome
