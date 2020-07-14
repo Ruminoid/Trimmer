@@ -18,8 +18,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Xml.Linq;
 using Enterwell.Clients.Wpf.Notifications;
+using Ruminoid.Common.Helpers;
 using Ruminoid.Trimmer.Commands;
-using Ruminoid.Trimmer.Helpers;
 using Ruminoid.Trimmer.Views;
 
 namespace Ruminoid.Trimmer.Windows
@@ -71,7 +71,7 @@ namespace Ruminoid.Trimmer.Windows
             doc.Save(SettingFileName);
             DockManager.Dispose();
 
-            ConfigHelper.SaveConfig();
+            ConfigHelper<Config>.SaveConfig(Config.Current);
         }
 
         #endregion
@@ -117,8 +117,8 @@ namespace Ruminoid.Trimmer.Windows
                 HorizontalAlignment = HorizontalAlignment.Left,
                 Content = "不要再提醒。"
             };
-            welcomeBox.Checked += (o, args) => ConfigHelper.Current.HideWelcome = true;
-            welcomeBox.Unchecked += (o, args) => ConfigHelper.Current.HideWelcome = false;
+            welcomeBox.Checked += (o, args) => Config.Current.HideWelcome = true;
+            welcomeBox.Unchecked += (o, args) => Config.Current.HideWelcome = false;
             NotificationManager
                 .CreateMessage()
                 .Accent("#007ACC")
