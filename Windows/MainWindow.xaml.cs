@@ -49,8 +49,6 @@ namespace Ruminoid.Trimmer.Windows
             #endregion
         }
 
-        private static readonly string SettingFileName = Path.Combine(ConfigHelper.UserDataFolder, "layout.xml");
-
         #region Notifications
 
         public NotificationMessageManager NotificationManager { get; } = new NotificationMessageManager();
@@ -61,16 +59,7 @@ namespace Ruminoid.Trimmer.Windows
 
         private void OnClosing(object sender, CancelEventArgs e)
         {
-            Directory.CreateDirectory(Path.Combine(Environment.CurrentDirectory, "settings"));
-            DockManager.SaveCurrentLayout("MainWindow");
-            var doc = new XDocument();
-            var rootNode = new XElement("Layouts");
-            foreach (var layout in DockManager.Layouts.Values)
-                layout.Save(rootNode);
-            doc.Add(rootNode);
-            doc.Save(SettingFileName);
-            DockManager.Dispose();
-
+            LayoutHelper<Config>.SaveLayoutAndDispose(DockManager, this);
             ConfigHelper<Config>.SaveConfig(Config.Current);
         }
 
@@ -88,24 +77,7 @@ namespace Ruminoid.Trimmer.Windows
                 {Wnd1, Wnd2, Wnd3, Wnd4, Wnd5, Wnd6, WwUp, WwMiddle, WwLeft, WwRight, WwDown, WwSkip, WwReturn};
 
             PlaybackView.Current.DockControl.Show();
-            if (File.Exists(SettingFileName))
-            {
-                XDocument layout = XDocument.Parse(File.ReadAllText(SettingFileName));
-                if (layout.Root != null)
-                    foreach (XElement item in layout.Root.Elements())
-                    {
-                        string name = item.Attribute("Name")?.Value;
-                        if (string.IsNullOrEmpty(name)) continue;
-                        if (DockManager.Layouts.ContainsKey(name))
-                            DockManager.Layouts[name].Load(item);
-                        else DockManager.Layouts[name] = new YDock.LayoutSetting.LayoutSetting(name, item);
-                    }
-                DockManager.ApplyLayout("MainWindow");
-            }
-            else
-            {
-                LyricEditorView.Current.DockControl.Show();
-            }
+            if (!LayoutHelper<Config>.ApplyLayout(DockManager, this)) LyricEditorView.Current.DockControl.Show();
 
             //sliderBinding = new Binding();
             //sliderBinding.Source = PlaybackView.Current.Position;
