@@ -42,7 +42,7 @@ namespace Ruminoid.Trimmer.Views
                 await VideoElement.Seek(TimeSpan.Zero);
                 await VideoElement.Play();
             };
-            VideoElement.RenderingVideo += RenderPreviewOnVideo;
+            //VideoElement.RenderingVideo += RenderPreviewOnVideo;
             Position.OnPositionActiveChanged += () => SeekToPosition(Position.Time);
 
             AddCommandBindings();
@@ -50,7 +50,7 @@ namespace Ruminoid.Trimmer.Views
 
         private void RenderPreviewOnVideo(object sender, RenderingVideoEventArgs e)
         {
-            _libAss.RenderAndBlend((int)e.Clock.TotalMilliseconds, e.Bitmap);
+            //_libAss.RenderAndBlend((int)e.Clock.TotalMilliseconds, e.Bitmap);
         }
 
         #region Current
@@ -59,7 +59,7 @@ namespace Ruminoid.Trimmer.Views
 
         #endregion
 
-        private LibASSContext _libAss = new LibASSContext();
+        //private LibASSContext _libAss = new LibASSContext();
 
         #region DockSource
 
