@@ -83,6 +83,8 @@ namespace Ruminoid.Trimmer.Windows
             //sliderBinding.Source = PlaybackView.Current.Position;
             //sliderBinding.Path = new PropertyPath("Percentage");
 
+            if(Config.Current.HideWelcome) return;
+
             CheckBox welcomeBox = new CheckBox
             {
                 Margin = new Thickness(12, 8, 12, 8),
