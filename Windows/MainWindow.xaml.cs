@@ -69,8 +69,6 @@ namespace Ruminoid.Trimmer.Windows
 
         private void OnLoaded(object sender, RoutedEventArgs e)
         {
-            VersionHeader.Header = $"版本 {Assembly.GetExecutingAssembly().GetName().Version}";
-
             IntPtr hwnd = new WindowInteropHelper(this).Handle;
             HwndSource.FromHwnd(hwnd).AddHook(WndProc);
             wndList = new List<FrameworkElement>

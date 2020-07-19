@@ -54,20 +54,6 @@ namespace Ruminoid.Trimmer.Windows
                 CanExecute));
 
             #endregion
-
-            #region Help
-
-            CommandBindings.Add(new CommandBinding(
-                UICommands.DoAppUpdate,
-                Command_DoAppUpdate,
-                (sender, args) =>
-                {
-                    args.CanExecute = !_updating;
-                    args.Handled = true;
-                }));
-
-            #endregion
-
         }
 
         #region File
@@ -96,24 +82,6 @@ namespace Ruminoid.Trimmer.Windows
                 }
             }
             else Close();
-        }
-
-        #endregion
-
-        #region Help
-
-        private void Command_DoAppUpdate(object sender, ExecutedRoutedEventArgs e)
-        {
-            _updating = true;
-            Task.Factory.StartNew(async () =>
-            {
-                //using (var mgr = new UpdateManager("https://ruminoid.vbox.moe/res/trimmer/releases"))
-                //{
-                //    await mgr.UpdateApp();
-                //    Application.Current.Dispatcher?.Invoke(() =>
-                //        _updating = false);
-                //}
-            });
         }
 
         #endregion

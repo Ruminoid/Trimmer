@@ -82,13 +82,6 @@
                         <MenuItem Command="{x:Static commands:UICommands.LoadMedia}" Foreground="#FF212121"/>
                         <MenuItem Command="{x:Static commands:UICommands.UnloadMedia}" Foreground="#FF212121"/>
                     </MenuItem>
-                    <MenuItem Header="帮助(_H)">
-                        <MenuItem Command="Help" Foreground="#FF212121"/>
-                        <MenuItem Command="{x:Static commands:UICommands.DoAppUpdate}" Foreground="#FF212121"/>
-                        <Separator/>
-                        <MenuItem Header="关于(_A)" IsEnabled="False" Foreground="#FF212121"/>
-                        <MenuItem Name="VersionHeader" IsEnabled="False" Foreground="#FF212121"/>
-                    </MenuItem>
                 </Menu>
                 <!--<Grid Grid.Column="2" HorizontalAlignment="Left" Margin="12,2"
                       Background="{DynamicResource BackgroundBrushKey}" VerticalAlignment="Center">

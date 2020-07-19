@@ -73,7 +73,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Commands\EditCommands.cs" />
-    <Compile Include="Commands\HelpCommands.cs" />
     <Compile Include="Commands\MainCommands.cs" />
     <Compile Include="Commands\PlaybackCommands.cs" />
     <Compile Include="Commands\ViewCommands.cs" />
