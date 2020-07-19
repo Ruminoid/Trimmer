@@ -22,7 +22,6 @@ namespace Ruminoid.Trimmer.Windows
 
         private void AddCommandBindings()
         {
-
             #region File
 
             CommandBindings.Add(new CommandBinding(
@@ -52,6 +51,13 @@ namespace Ruminoid.Trimmer.Windows
                 UICommands.ShowPlaybackView,
                 (sender, args) => PlaybackView.Current.DockControl?.Show(),
                 CanExecute));
+
+            #endregion
+
+            #region Other Window
+
+            LyricEditorView.Current.AddCommandBindings();
+            PlaybackView.Current.AddCommandBindings();
 
             #endregion
         }

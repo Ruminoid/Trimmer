@@ -44,8 +44,6 @@ namespace Ruminoid.Trimmer.Views
             };
             //VideoElement.RenderingVideo += RenderPreviewOnVideo;
             Position.OnPositionActiveChanged += () => SeekToPosition(Position.Time);
-
-            AddCommandBindings();
         }
 
         private void RenderPreviewOnVideo(object sender, RenderingVideoEventArgs e)

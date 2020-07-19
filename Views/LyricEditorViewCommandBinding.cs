@@ -15,7 +15,7 @@ namespace Ruminoid.Trimmer.Views
     public partial class LyricEditorView
     {
 
-        private void AddCommandBindings()
+        public void AddCommandBindings()
         {
             Application.Current.MainWindow?.CommandBindings.Add(new CommandBinding(
                 UICommands.AddLyrics,

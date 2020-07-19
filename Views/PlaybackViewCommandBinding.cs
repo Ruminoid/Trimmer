@@ -13,7 +13,7 @@ namespace Ruminoid.Trimmer.Views
     public partial class PlaybackView
     {
 
-        private void AddCommandBindings()
+        public void AddCommandBindings()
         {
 
             #region Playback

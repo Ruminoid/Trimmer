@@ -36,11 +36,7 @@ namespace Ruminoid.Trimmer.Views
 
         private void OnLoaded(object sender, RoutedEventArgs e)
         {
-
-            AddCommandBindings();
-
             LrcModel.Current.SetTargeting += OnSetTargeting;
-
         }
 
         #endregion
