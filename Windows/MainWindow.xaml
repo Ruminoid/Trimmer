@@ -137,7 +137,10 @@
 
             <StackPanel Grid.Column="1" HorizontalAlignment="Center" Orientation="Horizontal" Name="WndCaption"
                         DataContext="{x:Static views:PlaybackView.Current}">
-                <Grid Background="{DynamicResource BackgroundBrushKey}" Width="80" Height="80">
+                <Grid
+                    Name="Wnd7"
+                    Background="{DynamicResource BackgroundBrushKey}"
+                    Width="80" Height="80">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="*" />
@@ -149,7 +152,7 @@
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
                     <Button
-                        Name="WwUp" Grid.Column="1"
+                        Grid.Column="1"
                         Padding="0"
                         ToolTip="撤销 (W，O，上箭头)"
                         Tag="Up"
@@ -168,7 +171,7 @@
                         <visualIcon:Icon Type="Undo" />
                     </Button>
                     <Button
-                        Name="WwLeft" Grid.Row="1" Grid.Column="0"
+                        Grid.Row="1" Grid.Column="0"
                         Padding="0"
                         ToolTip="快退 (A, K, 左箭头)"
                         Tag="Left"
@@ -187,7 +190,7 @@
                         <visualIcon:Icon Type="Previous" />
                     </Button>
                     <ToggleButton
-                        Name="WwMiddle" Grid.Row="1" Grid.Column="1"
+                        Grid.Row="1" Grid.Column="1"
                         BorderBrush="{x:Null}"
                         IsChecked="{Binding ElementName=RootElement, Path=IsHandling}"
                         Padding="0"
@@ -195,7 +198,7 @@
                         <visualIcon:Icon Type="Lock" />
                     </ToggleButton>
                     <Button
-                        Name="WwRight" Grid.Row="1" Grid.Column="2"
+                        Grid.Row="1" Grid.Column="2"
                         Padding="0"
                         ToolTip="快进 (D, 分号, 右箭头)"
                         Tag="Right"
@@ -214,7 +217,7 @@
                         <visualIcon:Icon Type="Next" />
                     </Button>
                     <Button
-                        Name="WwDown" Grid.Row="2" Grid.Column="1"
+                        Grid.Row="2" Grid.Column="1"
                         Padding="0"
                         ToolTip="应用时间 (S, L, 下箭头)"
                         Tag="Down"
@@ -233,7 +236,7 @@
                         <visualIcon:Icon Type="ApplyCodeChanges" />
                     </Button>
                     <Button
-                        Name="WwSkip" Grid.Row="2" Grid.Column="0"
+                        Grid.Row="2" Grid.Column="0"
                         Padding="0"
                         ToolTip="跳过 (Z, 逗号)"
                         Tag="Skip"
@@ -252,7 +255,7 @@
                         <visualIcon:Icon Type="SkipFile" />
                     </Button>
                     <Button
-                        Name="WwReturn" Grid.Row="2" Grid.Column="2"
+                        Grid.Row="2" Grid.Column="2"
                         Padding="0"
                         ToolTip="结束这行 (X, 句号)"
                         Tag="Return"
