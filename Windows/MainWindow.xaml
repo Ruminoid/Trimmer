@@ -52,35 +52,37 @@
                 <controls:CaptionIcon x:Name="Wnd1" Grid.Column="0" Padding="8,6,4,6" VerticalAlignment="Center">
                     <Image Height="20" Width="20" Source="../Assets/Ruminoid.Trimmer.Half.Transparent.png"/>
                 </controls:CaptionIcon>
-                <Menu x:Name="Wnd2" Grid.Column="1" Background="{x:Null}" Foreground="White"
+                <Menu x:Name="Wnd2" Grid.Column="1" Background="{x:Null}"
                       VerticalAlignment="Center" HorizontalAlignment="Left">
-                    <MenuItem Header="文件(_F)">
-                        <!--<MenuItem Command="New" Foreground="#FF212121"/>
-                        <MenuItem Command="Open" Foreground="#FF212121"/>
-                        <MenuItem Command="Close" Foreground="#FF212121"/>-->
-                        <MenuItem Command="Save" Foreground="#FF212121"/>
+                    <MenuItem Header="Trimmer">
+                        <MenuItem Header="文件(_F)">
+                            <!--<MenuItem Command="New"/>
+                        <MenuItem Command="Open"/>
+                        <MenuItem Command="Close"/>-->
+                            <MenuItem Command="Save"/>
+                            <Separator/>
+                            <MenuItem Command="{x:Static commands:UICommands.ExitApp}"/>
+                        </MenuItem>
+                        <MenuItem Header="编辑(_E)">
+                            <!--<MenuItem Command="Undo"/>
+                        <MenuItem Command="Redo"/>
                         <Separator/>
-                        <MenuItem Command="{x:Static commands:UICommands.ExitApp}" Foreground="#FF212121"/>
-                    </MenuItem>
-                    <MenuItem Header="编辑(_E)">
-                        <!--<MenuItem Command="Undo" Foreground="#FF212121"/>
-                        <MenuItem Command="Redo" Foreground="#FF212121"/>
+                        <MenuItem Command="Cut"/>
+                        <MenuItem Command="Copy"/>
+                        <MenuItem Command="Paste"/>
                         <Separator/>
-                        <MenuItem Command="Cut" Foreground="#FF212121"/>
-                        <MenuItem Command="Copy" Foreground="#FF212121"/>
-                        <MenuItem Command="Paste" Foreground="#FF212121"/>
-                        <Separator/>
-                        <MenuItem Command="Find" Foreground="#FF212121"/>
-                        <MenuItem Command="Replace" Foreground="#FF212121"/>-->
-                        <MenuItem Command="{x:Static commands:UICommands.AddLyrics}" Foreground="#FF212121"/>
-                    </MenuItem>
-                    <MenuItem Header="视图(_V)">
-                        <MenuItem Command="{x:Static commands:UICommands.ShowLyricsEditorView}" Foreground="#FF212121"/>
-                        <MenuItem Command="{x:Static commands:UICommands.ShowPlaybackView}" Foreground="#FF212121"/>
-                    </MenuItem>
-                    <MenuItem Header="回放(_P)">
-                        <MenuItem Command="{x:Static commands:UICommands.LoadMedia}" Foreground="#FF212121"/>
-                        <MenuItem Command="{x:Static commands:UICommands.UnloadMedia}" Foreground="#FF212121"/>
+                        <MenuItem Command="Find"/>
+                        <MenuItem Command="Replace"/>-->
+                            <MenuItem Command="{x:Static commands:UICommands.AddLyrics}"/>
+                        </MenuItem>
+                        <MenuItem Header="视图(_V)">
+                            <MenuItem Command="{x:Static commands:UICommands.ShowLyricsEditorView}"/>
+                            <MenuItem Command="{x:Static commands:UICommands.ShowPlaybackView}"/>
+                        </MenuItem>
+                        <MenuItem Header="回放(_P)">
+                            <MenuItem Command="{x:Static commands:UICommands.LoadMedia}"/>
+                            <MenuItem Command="{x:Static commands:UICommands.UnloadMedia}"/>
+                        </MenuItem>
                     </MenuItem>
                 </Menu>
                 <!--<Grid Grid.Column="2" HorizontalAlignment="Left" Margin="12,2"
