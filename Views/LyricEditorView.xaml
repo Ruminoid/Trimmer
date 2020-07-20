@@ -56,12 +56,8 @@
                   ItemsSource="{Binding Items}"
                   SelectionMode="Single"
                   HorizontalContentAlignment="Stretch"
-                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
-            <ListView.ItemContainerStyle>
-                <Style TargetType="ListViewItem">
-                    <Setter Property="Focusable" Value="false"/>
-                </Style>
-            </ListView.ItemContainerStyle>
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                  Style="{DynamicResource NoBorderListViewStyle}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid Width="{Binding ElementName=RootView, Path=ActualWidth}">
