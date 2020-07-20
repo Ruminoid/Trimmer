@@ -16,27 +16,20 @@
              SnapsToDevicePixels="True"
              Name="RootElement">
 
-    <UserControl.Resources>
-        <Style x:Key="BgNotiStyle" TargetType="TextBlock">
-            <Setter Property="Opacity" Value="0.5"/>
-            <Setter Property="FontSize" Value="16"/>
-        </Style>
-    </UserControl.Resources>
-
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="250"
                     DataContext="{x:Static models:LrcModel.Current}">
             <Grid Margin="12">
-                <TextBlock Style="{StaticResource BgNotiStyle}" Text="添加歌词" HorizontalAlignment="Left"/>
-                <TextBlock Style="{StaticResource BgNotiStyle}" Text="Ctrl + T" HorizontalAlignment="Right"/>
+                <TextBlock Style="{DynamicResource BackgroundNotifyTextStyle}" Text="添加歌词" HorizontalAlignment="Left"/>
+                <TextBlock Style="{DynamicResource BackgroundNotifyTextStyle}" Text="Ctrl + T" HorizontalAlignment="Right"/>
             </Grid>
             <Grid Margin="12">
-                <TextBlock Style="{StaticResource BgNotiStyle}" Text="加载媒体" HorizontalAlignment="Left"/>
-                <TextBlock Style="{StaticResource BgNotiStyle}" Text="Ctrl + L" HorizontalAlignment="Right"/>
+                <TextBlock Style="{DynamicResource BackgroundNotifyTextStyle}" Text="加载媒体" HorizontalAlignment="Left"/>
+                <TextBlock Style="{DynamicResource BackgroundNotifyTextStyle}" Text="Ctrl + L" HorizontalAlignment="Right"/>
             </Grid>
             <Grid Margin="12">
-                <TextBlock Style="{StaticResource BgNotiStyle}" Text="播放/暂停" HorizontalAlignment="Left"/>
-                <TextBlock Style="{StaticResource BgNotiStyle}" Text="空格" HorizontalAlignment="Right"/>
+                <TextBlock Style="{DynamicResource BackgroundNotifyTextStyle}" Text="播放/暂停" HorizontalAlignment="Left"/>
+                <TextBlock Style="{DynamicResource BackgroundNotifyTextStyle}" Text="空格" HorizontalAlignment="Right"/>
             </Grid>
             <StackPanel.Style>
                 <Style TargetType="StackPanel">
