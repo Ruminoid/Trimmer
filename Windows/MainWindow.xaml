@@ -102,43 +102,29 @@
             </Grid.ColumnDefinitions>
 
             <Grid Margin="0,32,0,0">
-                <ToolBarTray VerticalAlignment="Center" Background="{x:Null}" Name="Wnd5" HorizontalAlignment="Left">
-                    <ToolBar Background="{x:Null}" Loaded="ToolBar_RemoveGrid">
-                        <!--<Button Margin="3">
-                            <visualIcon:Icon Type="NewFile" Margin="3"/>
-                        </Button>
-                        <Button Margin="3">
-                            <visualIcon:Icon Type="OpenFile" Margin="3"/>
-                        </Button>-->
-                        <Button Command="Save" Margin="3" ToolTip="保存 (Ctrl+S)">
-                            <visualIcon:Icon Type="Save" Margin="3"/>
-                        </Button>
-                        <!--<Button Margin="3">
-                            <visualIcon:Icon Type="ExportScript" Margin="3"/>
-                        </Button>-->
-                    </ToolBar>
-                    <ToolBar Background="{x:Null}" Loaded="ToolBar_RemoveGrid">
-                        <Button Command="{x:Static commands:UICommands.ShowLyricsEditorView}" Margin="3" ToolTip="编辑 (F3)">
-                            <visualIcon:Icon Type="Timeline" Margin="3"/>
-                        </Button>
-                        <Button Command="{x:Static commands:UICommands.ShowPlaybackView}" Margin="3" ToolTip="回放 (F4)">
-                            <visualIcon:Icon Type="PlaybackPreview" Margin="3"/>
-                        </Button>
-                    </ToolBar>
-                    <ToolBar Background="{x:Null}" Loaded="ToolBar_RemoveGrid">
-                        <Button Command="{x:Static commands:UICommands.AddLyrics}" Margin="3" ToolTip="加载歌词... (Ctrl+T)">
-                            <visualIcon:Icon Type="AddComment" Margin="3"/>
-                        </Button>
-                    </ToolBar>
-                    <ToolBar Background="{x:Null}" Loaded="ToolBar_RemoveGrid">
-                        <Button Command="{x:Static commands:UICommands.LoadMedia}" Margin="3" ToolTip="加载媒体 (Ctrl+L)">
-                            <visualIcon:Icon Type="Media" Margin="3"/>
-                        </Button>
-                        <Button Command="{x:Static commands:UICommands.UnloadMedia}" Margin="3" ToolTip="卸载媒体 (Ctrl+U)">
-                            <visualIcon:Icon Type="CloseDocument" Margin="3"/>
-                        </Button>
-                    </ToolBar>
-                </ToolBarTray>
+                <StackPanel Orientation="Horizontal"
+                            VerticalAlignment="Center"
+                            Background="{x:Null}" Name="Wnd5"
+                            HorizontalAlignment="Left">
+                    <Button Command="Save" Margin="3" ToolTip="保存 (Ctrl+S)">
+                        <visualIcon:Icon Type="Save" Margin="3"/>
+                    </Button>
+                    <Button Command="{x:Static commands:UICommands.ShowLyricsEditorView}" Margin="3" ToolTip="编辑 (F3)">
+                        <visualIcon:Icon Type="Timeline" Margin="3"/>
+                    </Button>
+                    <Button Command="{x:Static commands:UICommands.ShowPlaybackView}" Margin="3" ToolTip="回放 (F4)">
+                        <visualIcon:Icon Type="PlaybackPreview" Margin="3"/>
+                    </Button>
+                    <Button Command="{x:Static commands:UICommands.AddLyrics}" Margin="3" ToolTip="加载歌词... (Ctrl+T)">
+                        <visualIcon:Icon Type="AddComment" Margin="3"/>
+                    </Button>
+                    <Button Command="{x:Static commands:UICommands.LoadMedia}" Margin="3" ToolTip="加载媒体 (Ctrl+L)">
+                        <visualIcon:Icon Type="Media" Margin="3"/>
+                    </Button>
+                    <Button Command="{x:Static commands:UICommands.UnloadMedia}" Margin="3" ToolTip="卸载媒体 (Ctrl+U)">
+                        <visualIcon:Icon Type="CloseDocument" Margin="3"/>
+                    </Button>
+                </StackPanel>
             </Grid>
 
             <StackPanel Grid.Column="1" HorizontalAlignment="Center" Orientation="Horizontal" Name="WndCaption"
