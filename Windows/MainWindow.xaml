@@ -60,8 +60,6 @@
                         <MenuItem Command="Open"/>
                         <MenuItem Command="Close"/>-->
                             <MenuItem Command="Save"/>
-                            <Separator/>
-                            <MenuItem Command="{x:Static commands:UICommands.ExitApp}"/>
                         </MenuItem>
                         <MenuItem Header="编辑(_E)">
                             <!--<MenuItem Command="Undo"/>
@@ -83,6 +81,8 @@
                             <MenuItem Command="{x:Static commands:UICommands.LoadMedia}"/>
                             <MenuItem Command="{x:Static commands:UICommands.UnloadMedia}"/>
                         </MenuItem>
+                        <Separator/>
+                        <MenuItem Command="{x:Static commands:UICommands.ExitApp}"/>
                     </MenuItem>
                 </Menu>
                 <!--<Grid Grid.Column="2" HorizontalAlignment="Left" Margin="12,2"
