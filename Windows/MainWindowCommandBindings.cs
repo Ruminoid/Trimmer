@@ -71,8 +71,8 @@ namespace Ruminoid.Trimmer.Windows
             if (LrcModel.Current.IsModified)
             {
                 MessageBoxResult result = MessageBox.Show(
-                    "存在未保存的修改。是否仍要退出？",
-                    "更改未保存",
+                    "存在未保存的修改。是否保存？",
+                    "修改未保存",
                     MessageBoxButton.YesNoCancel,
                     MessageBoxImage.Warning,
                     MessageBoxResult.Yes);
