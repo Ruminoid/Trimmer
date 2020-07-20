@@ -59,6 +59,8 @@ namespace Ruminoid.Trimmer.Windows
 
         private void OnClosing(object sender, CancelEventArgs e)
         {
+            e.Cancel = ExitApp();
+            if (e.Cancel) return;
             LayoutHelper<Config>.SaveLayoutAndDispose(DockManager, this);
             ConfigHelper<Config>.SaveConfig(Config.Current);
         }

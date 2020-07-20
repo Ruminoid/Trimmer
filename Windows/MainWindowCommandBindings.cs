@@ -68,26 +68,33 @@ namespace Ruminoid.Trimmer.Windows
 
         private void Command_ExitApp(object sender, ExecutedRoutedEventArgs e)
         {
-            if (LrcModel.Current.IsModified)
+            if (!ExitApp()) Close();
+        }
+
+        /// <summary>
+        /// 请求退出应用。
+        /// </summary>
+        /// <returns>是否获得了句柄。</returns>
+        private bool ExitApp()
+        {
+            if (!LrcModel.Current.IsModified)
+                return false;
+            MessageBoxResult result = MessageBox.Show(
+                "存在未保存的修改。是否保存？",
+                "修改未保存",
+                MessageBoxButton.YesNoCancel,
+                MessageBoxImage.Warning,
+                MessageBoxResult.Yes);
+            switch (result)
             {
-                MessageBoxResult result = MessageBox.Show(
-                    "存在未保存的修改。是否保存？",
-                    "修改未保存",
-                    MessageBoxButton.YesNoCancel,
-                    MessageBoxImage.Warning,
-                    MessageBoxResult.Yes);
-                switch (result)
-                {
-                    case MessageBoxResult.Yes:
-                        Command_Save(null, null);
-                        Close();
-                        break;
-                    case MessageBoxResult.No:
-                        Close();
-                        break;
-                }
+                case MessageBoxResult.Yes:
+                    Command_Save(null, null);
+                    return false;
+                case MessageBoxResult.No:
+                    return false;
+                default:
+                    return true;
             }
-            else Close();
         }
 
         #endregion
