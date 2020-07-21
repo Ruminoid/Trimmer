@@ -66,10 +66,7 @@ namespace Ruminoid.Trimmer.Windows
 
         private void Command_Save(object sender, ExecutedRoutedEventArgs e) => new SaveFileDialog().ShowDialog();
 
-        private void Command_ExitApp(object sender, ExecutedRoutedEventArgs e)
-        {
-            if (!ExitApp()) Close();
-        }
+        private void Command_ExitApp(object sender, ExecutedRoutedEventArgs e) => Close();
 
         /// <summary>
         /// 请求退出应用。
