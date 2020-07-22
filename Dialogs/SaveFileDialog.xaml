@@ -16,8 +16,8 @@
         IsRestoringWindowPlacement="True"
         TextOptions.TextFormattingMode="Display"
         SnapsToDevicePixels="True"
-        MinHeight="200" MinWidth="600"
-        Width="600"
+        ResizeMode="NoResize"
+        Height="200" Width="600"
         Title="保存" WindowStartupLocation="CenterScreen"
         ShowInTaskbar="False"
         Name="RootElement">
