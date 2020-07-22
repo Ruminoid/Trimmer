@@ -16,6 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using Ruminoid.Trimmer.Models;
+using Path = System.IO.Path;
 
 namespace Ruminoid.Trimmer.Dialogs
 {
@@ -73,7 +74,10 @@ namespace Ruminoid.Trimmer.Dialogs
                     Filters = { new CommonFileDialogFilter("ASS 字幕文件", ".ass") },
                     EnsureFileExists = true
                 };
-                if (saveFileDialog.ShowDialog() == CommonFileDialogResult.Ok) FilePath = saveFileDialog.FileName;
+                if (saveFileDialog.ShowDialog() == CommonFileDialogResult.Ok)
+                    FilePath = saveFileDialog.FileName.EndsWith(".ass")
+                        ? saveFileDialog.FileName
+                        : saveFileDialog.FileName + ".ass";
                 Activate();
                 return;
             }
