@@ -72,6 +72,9 @@
                             </MenuItem>
                             <MenuItem Header="编辑(_E)">
                                 <MenuItem Command="{x:Static commands:UICommands.AddLyrics}" />
+                                <Separator/>
+                                <MenuItem Command="{x:Static commands:UICommands.EditSkipData}" />
+                                <MenuItem Command="{x:Static commands:UICommands.ReloadSkipData}" />
                             </MenuItem>
                             <MenuItem Header="视图(_V)">
                                 <MenuItem Command="{x:Static commands:UICommands.ShowLyricsEditorView}" />

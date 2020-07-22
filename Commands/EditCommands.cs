@@ -20,5 +20,17 @@ namespace Ruminoid.Trimmer.Commands
                 new KeyGesture(Key.F5, ModifierKeys.None, "F5")
             }));
 
+        public static RoutedUICommand EditSkipData { get; } = new RoutedUICommand(
+            "编辑跳过单字(_E)",
+            "EditSkipData",
+            typeof(UICommands),
+            new InputGestureCollection());
+
+        public static RoutedUICommand ReloadSkipData { get; } = new RoutedUICommand(
+            "重载跳过单字(_R)",
+            "ReloadSkipData",
+            typeof(UICommands),
+            new InputGestureCollection());
+
     }
 }

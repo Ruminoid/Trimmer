@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Ruminoid.Common.Helpers;
 
 namespace Ruminoid.Trimmer.Models
 {
@@ -18,8 +19,22 @@ namespace Ruminoid.Trimmer.Models
 
         public static LrcModel Current { get; set; } = new LrcModel();
 
-        public static readonly string SkipData =
-            File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\SkipData.txt"));
+        #endregion
+
+        #region SkipData
+
+        public static readonly string SkipData = ReloadSkipData();
+
+        public static string UserSkipDataPath;
+
+        public static string ReloadSkipData()
+        {
+            if (UserSkipDataPath is null) UserSkipDataPath = Path.Combine(ConfigHelper<Config>.GetConfigFolder(), "SkipData.txt");
+            if (!File.Exists(UserSkipDataPath))
+                File.Copy(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\SkipData.txt"),
+                    UserSkipDataPath, true);
+            return File.ReadAllText(UserSkipDataPath);
+        }
 
         #endregion
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -33,6 +34,20 @@ namespace Ruminoid.Trimmer.Windows
             CommandBindings.Add(new CommandBinding(
                 UICommands.ExitApp,
                 Command_ExitApp,
+                CanExecute));
+
+            #endregion
+
+            #region Edit
+
+            CommandBindings.Add(new CommandBinding(
+                UICommands.EditSkipData,
+                (sender, args) => Process.Start(LrcModel.UserSkipDataPath),
+                CanExecute));
+
+            CommandBindings.Add(new CommandBinding(
+                UICommands.ReloadSkipData,
+                (sender, args) => LrcModel.ReloadSkipData(),
                 CanExecute));
 
             #endregion
