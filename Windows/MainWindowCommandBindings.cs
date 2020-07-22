@@ -17,9 +17,6 @@ namespace Ruminoid.Trimmer.Windows
 {
     public partial class MainWindow : INotifyPropertyChanged
     {
-
-        private bool _updating;
-
         private void AddCommandBindings()
         {
             #region File
