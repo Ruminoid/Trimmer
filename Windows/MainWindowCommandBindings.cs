@@ -22,8 +22,8 @@ namespace Ruminoid.Trimmer.Windows
             #region File
 
             CommandBindings.Add(new CommandBinding(
-                ApplicationCommands.Save,
-                Command_Save,
+                UICommands.Export,
+                Command_Export,
                 (sender, args) =>
                 {
                     args.CanExecute = LrcModel.Current.IsModified;
@@ -61,7 +61,7 @@ namespace Ruminoid.Trimmer.Windows
 
         #region File
 
-        private void Command_Save(object sender, ExecutedRoutedEventArgs e) => new SaveFileDialog().ShowDialog();
+        private void Command_Export(object sender, ExecutedRoutedEventArgs e) => new SaveFileDialog().ShowDialog();
 
         private void Command_ExitApp(object sender, ExecutedRoutedEventArgs e) => Close();
 
@@ -82,7 +82,7 @@ namespace Ruminoid.Trimmer.Windows
             switch (result)
             {
                 case MessageBoxResult.Yes:
-                    Command_Save(null, null);
+                    Command_Export(null, null);
                     return false;
                 case MessageBoxResult.No:
                     return false;

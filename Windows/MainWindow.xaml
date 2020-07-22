@@ -68,7 +68,7 @@
                                 </Grid>
                             </MenuItem.Header>
                             <MenuItem Header="文件(_F)">
-                                <MenuItem Command="Save" />
+                                <MenuItem Command="{x:Static commands:UICommands.Export}" />
                             </MenuItem>
                             <MenuItem Header="编辑(_E)">
                                 <MenuItem Command="{x:Static commands:UICommands.AddLyrics}" />
@@ -91,7 +91,8 @@
                                     VerticalAlignment="Center"
                                     Background="{x:Null}" Name="Wnd5"
                                     HorizontalAlignment="Left">
-                            <Button Command="Save" ToolTip="保存 (Ctrl+S)"
+                            <Button Command="{x:Static commands:UICommands.Export}"
+                                    ToolTip="导出ASS (Ctrl+Shift+S)"
                                     Style="{DynamicResource ToolBarButtonStyle}">
                                 <visualIcon:Icon Type="Save" Margin="1" />
                             </Button>

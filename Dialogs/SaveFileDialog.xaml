@@ -18,7 +18,7 @@
         SnapsToDevicePixels="True"
         ResizeMode="NoResize"
         Height="200" Width="600"
-        Title="保存" WindowStartupLocation="CenterScreen"
+        Title="导出ASS" WindowStartupLocation="CenterScreen"
         ShowInTaskbar="False"
         Name="RootElement">
 
