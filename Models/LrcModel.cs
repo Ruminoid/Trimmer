@@ -8,6 +8,8 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Ruminoid.Common.Helpers;
+using Ruminoid.Common.Timing;
+using Ruminoid.Common.Utilities;
 
 namespace Ruminoid.Trimmer.Models
 {

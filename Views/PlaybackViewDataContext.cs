@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using MetroRadiance.UI;
+using Ruminoid.Common.Timing;
 using Ruminoid.Trimmer.Models;
 
 namespace Ruminoid.Trimmer.Views

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using Microsoft.WindowsAPICodePack.Shell.PropertySystem;
+using Ruminoid.Common.Timing;
 
 namespace Ruminoid.Trimmer.Models
 {

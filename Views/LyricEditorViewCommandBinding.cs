@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using Ruminoid.Common.Timing;
 using Ruminoid.Trimmer.Commands;
 using Ruminoid.Trimmer.Dialogs;
 using Ruminoid.Trimmer.Models;
