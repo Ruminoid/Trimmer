@@ -11,6 +11,7 @@
                 <ResourceDictionary Source="pack://application:,,,/MetroRadiance;component/Themes/Dark.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MetroRadiance;component/Themes/Accents/Blue.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/Ruminoid.Common;component/Styles/Generic.xaml"/>
+                <ResourceDictionary Source="Styles/ControlButtonStyles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

@@ -1,5 +1,57 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:Ruminoid.Trimmer.Styles">
-    
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="UpControlButtonStyle" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Background" Value="{DynamicResource BackgroundBrushKey}" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding ElementName=RootElement, Path=IsUpPressed}"
+                                                 Value="True">
+                <Setter Property="Background" Value="{DynamicResource AccentBrushKey}" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="LeftControlButtonStyle" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Background" Value="{DynamicResource BackgroundBrushKey}" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding ElementName=RootElement, Path=IsLeftPressed}"
+                                                 Value="True">
+                <Setter Property="Background" Value="{DynamicResource AccentBrushKey}" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="RightControlButtonStyle" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Background" Value="{DynamicResource BackgroundBrushKey}" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding ElementName=RootElement, Path=IsRightPressed}"
+                                                 Value="True">
+                <Setter Property="Background" Value="{DynamicResource AccentBrushKey}" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="DownControlButtonStyle" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Background" Value="{DynamicResource BackgroundBrushKey}" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding ElementName=RootElement, Path=IsDownPressed}"
+                                                 Value="True">
+                <Setter Property="Background" Value="{DynamicResource AccentBrushKey}" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="SkipControlButtonStyle" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Background" Value="{DynamicResource BackgroundBrushKey}" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding ElementName=RootElement, Path=IsSkipPressed}"
+                                                 Value="True">
+                <Setter Property="Background" Value="{DynamicResource AccentBrushKey}" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="ReturnControlButtonStyle" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Background" Value="{DynamicResource BackgroundBrushKey}" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding ElementName=RootElement, Path=IsReturnPressed}"
+                                                 Value="True">
+                <Setter Property="Background" Value="{DynamicResource AccentBrushKey}" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
 </ResourceDictionary>
