@@ -147,30 +147,5 @@ namespace Ruminoid.Trimmer.Windows
         private const int WM_NCHITTEST = 0x0084;
 
         #endregion
-
-        #region Slider
-
-        private Binding sliderBinding;
-
-        private void Slider_OnPreviewMouseDown(object sender, MouseButtonEventArgs e)
-        {
-            //BindingOperations.ClearBinding(Wnd6, RangeBase.ValueProperty);
-            //Wnd6.Value = PlaybackView.Current.Position.Percentage;
-            //Wnd6.ValueChanged += SliderOnValueChanged;
-        }
-
-        private void SliderOnValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            //PlaybackView.Current.SeekToPosition((long)(e.NewValue * PlaybackView.Current.Position.Total));
-        }
-
-        private void Slider_OnPreviewMouseUp(object sender, MouseButtonEventArgs e)
-        {
-            //Wnd6.ValueChanged -= SliderOnValueChanged;
-            //Wnd6.SetBinding(RangeBase.ValueProperty, sliderBinding);
-        }
-
-        #endregion
-
     }
 }

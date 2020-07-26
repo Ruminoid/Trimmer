@@ -269,9 +269,7 @@
                         Minimum="0" Maximum="1"
                         IsEnabled="{Binding MediaLoaded}"
                         Value="{Binding Position.Percentage}"
-                        IsMoveToPointEnabled="True"
-                        PreviewMouseDown="Slider_OnPreviewMouseDown"
-                        PreviewMouseUp="Slider_OnPreviewMouseUp" />
+                        IsMoveToPointEnabled="True" />
             </Grid>
 
         </Grid>
