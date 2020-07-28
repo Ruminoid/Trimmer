@@ -241,7 +241,7 @@
       <Version>12.0.3</Version>
     </PackageReference>
     <PackageReference Include="Ruminoid.Libraries">
-      <Version>0.2.5</Version>
+      <Version>0.2.7</Version>
     </PackageReference>
     <PackageReference Include="WindowsAPICodePack-Core">
       <Version>1.1.1</Version>
