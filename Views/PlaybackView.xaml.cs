@@ -18,7 +18,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using Ruminoid.Trimmer.Commands;
-using Ruminoid.Trimmer.LibAss;
 using Ruminoid.Trimmer.Models;
 
 namespace Ruminoid.Trimmer.Views
