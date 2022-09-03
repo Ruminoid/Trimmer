@@ -22,6 +22,18 @@ namespace Ruminoid.Trimmer.Views
                 UICommands.AddLyrics,
                 AddLyrics_Executed,
                 CanExecute));
+            Application.Current.MainWindow?.CommandBindings.Add(new CommandBinding(
+                UICommands.ClearLyrics,
+                ClearLyrics_Executed,
+                CanExecute));
+        }
+
+        public void ClearLyrics_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            if(MessageBox.Show("确认清空所有歌词吗？", "确认", MessageBoxButton.OKCancel, MessageBoxImage.Question) == MessageBoxResult.OK)
+            {
+                LrcModel.Current.ClearAll();
+            }
         }
 
         public void AddLyrics_Executed(object sender, ExecutedRoutedEventArgs e)
