@@ -60,7 +60,7 @@ namespace Ruminoid.Trimmer.Views
             Playing = true;
             //MediaPlayer.Play(new Media(_libVLC, fileDialog.FileName));
             await VideoElement.Open(new Uri(fileDialog.FileName));
-            await VideoElement.Play();
+            //await VideoElement.Play();
         }
 
         private async void Command_UnloadMedia(object sender, ExecutedRoutedEventArgs e)

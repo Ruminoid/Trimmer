@@ -20,6 +20,12 @@ namespace Ruminoid.Trimmer.Commands
                 new KeyGesture(Key.F5, ModifierKeys.None, "F5")
             }));
 
+        public static RoutedUICommand ClearLyrics { get; } = new RoutedUICommand(
+            "清空歌词(_C)...",
+            "ClearLyrics",
+            typeof(UICommands),
+            new InputGestureCollection());
+
         public static RoutedUICommand EditSkipData { get; } = new RoutedUICommand(
             "编辑跳过单字(_E)",
             "EditSkipData",

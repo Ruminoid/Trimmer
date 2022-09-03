@@ -74,7 +74,7 @@ namespace Ruminoid.Trimmer.Windows
             IntPtr hwnd = new WindowInteropHelper(this).Handle;
             HwndSource.FromHwnd(hwnd).AddHook(WndProc);
             wndList = new List<FrameworkElement>
-                {Wnd1, Wnd2, Wnd3, Wnd4, Wnd5, Wnd6, Wnd7};
+                {Wnd1, Wnd2, Wnd3, Wnd4, Wnd5, Wnd6, Wnd7, SpeedPanel};
 
             PlaybackView.Current.DockControl.Show();
             if (!LayoutHelper<Config>.ApplyLayout(DockManager, this)) LyricEditorView.Current.DockControl.Show();
@@ -147,5 +147,10 @@ namespace Ruminoid.Trimmer.Windows
         private const int WM_NCHITTEST = 0x0084;
 
         #endregion
+
+        private void ResetSpeed_Click(object sender, RoutedEventArgs e)
+        {
+            PlaybackView.Current.PlaySpeed = 1.0;
+        }
     }
 }

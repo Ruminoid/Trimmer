@@ -271,6 +271,15 @@ namespace Ruminoid.Trimmer.Windows
                 case Key.Right:
                     PlaybackView.Current.JumpDuration(+1000);
                     break;
+                case Key.Q:
+                case Key.I:
+                    PlaybackView.Current.PlaySpeed -= 0.1;
+                    break;
+                case Key.E:
+                case Key.P:
+                    PlaybackView.Current.PlaySpeed += 0.1;
+                    break;
+
             }
         }
 

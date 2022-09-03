@@ -72,6 +72,7 @@
                             </MenuItem>
                             <MenuItem Header="编辑(_E)">
                                 <MenuItem Command="{x:Static commands:UICommands.AddLyrics}" />
+                                <MenuItem Command="{x:Static commands:UICommands.ClearLyrics}" />
                                 <Separator/>
                                 <MenuItem Command="{x:Static commands:UICommands.EditSkipData}" />
                                 <MenuItem Command="{x:Static commands:UICommands.ReloadSkipData}" />
@@ -134,12 +135,31 @@
 
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition />
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="Auto" />
-                <ColumnDefinition />
+                <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
-
-            <StackPanel Grid.Column="1" HorizontalAlignment="Center" Orientation="Horizontal" Name="WndCaption"
+            <StackPanel x:Name="SpeedPanel" Orientation="Horizontal" VerticalAlignment="Center" Grid.Column="1" Margin="0,32,0,0">
+                <TextBlock VerticalAlignment="Center">倍速：</TextBlock>
+                <Slider                         
+                    ToolTip="E/P加速 Q/I减速"
+                    Width="100" 
+                    Minimum="0.1" 
+                    Maximum="3" 
+                    DataContext="{x:Static views:PlaybackView.Current}"
+                    Value="{Binding PlaySpeed}"
+                 ></Slider>
+                <TextBlock DataContext="{x:Static views:PlaybackView.Current}" VerticalAlignment="Center">
+                    <TextBlock.Text>
+                        <Binding Path="PlaySpeed" StringFormat="×{0:f2}"/>
+                    </TextBlock.Text>
+                </TextBlock>
+                <Button Margin="5,0,0,0" Name="ResetSpeed" Click="ResetSpeed_Click">
+                    重置
+                </Button>
+            </StackPanel>
+            <StackPanel Grid.Column="2" HorizontalAlignment="Center" Orientation="Horizontal" Name="WndCaption"
                         DataContext="{x:Static views:PlaybackView.Current}">
                 <Grid
                     Name="Wnd7"
@@ -246,10 +266,10 @@
                               Height="80" Width="80" Padding="0" Name="Wnd4"
                               IsEnabled="{Binding MediaLoaded}" IsChecked="{Binding Playing}">
                     <Grid Height="80" Width="80">
-                        <visualIcon:Icon Type="Run" Width="35" Height="35" Size="2"
+                        <visualIcon:Icon Type="{Binding PlayButtonIconType}" Width="35" Height="35" Size="2"
                                          HorizontalAlignment="Left" VerticalAlignment="Top" Margin="4,0" />
                         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom"
-                                   Margin="-2,0,0,6" Text="播放/暂停" />
+                                   Margin="-2,0,0,6" Text="{Binding PlayButtonText}" />
                     </Grid>
                 </ToggleButton>
                 <!--<ToggleButton HorizontalAlignment="Right" VerticalAlignment="Bottom"
@@ -263,7 +283,7 @@
                 </ToggleButton>-->
             </StackPanel>
 
-            <Grid Grid.Column="2" Margin="0,32,0,0">
+            <Grid Grid.Column="3" Margin="0,32,0,0">
                 <Slider Margin="12" Name="Wnd6"
                         DataContext="{x:Static views:PlaybackView.Current}"
                         Minimum="0" Maximum="1"

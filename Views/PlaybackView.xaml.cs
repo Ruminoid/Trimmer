@@ -30,7 +30,7 @@ namespace Ruminoid.Trimmer.Views
 
         public PlaybackView()
         {
-            InitializeComponent();
+            InitializeComponent();            
             VideoElement.PositionChanged += (o, args) =>
                 Position.Time = (long)args.Position.TotalMilliseconds;
             VideoElement.MediaOpened += (o, args) =>
@@ -38,11 +38,17 @@ namespace Ruminoid.Trimmer.Views
             VideoElement.MediaFailed += (o, args) => Console.WriteLine(@"[FFME] MediaFailed : " + args.ErrorException);
             VideoElement.MediaEnded += async (o, args) =>
             {
-                await VideoElement.Seek(TimeSpan.Zero);
-                await VideoElement.Play();
+                //await VideoElement.Seek(TimeSpan.Zero);
+                //await VideoElement.Play();
             };
             //VideoElement.RenderingVideo += RenderPreviewOnVideo;
             Position.OnPositionActiveChanged += () => SeekToPosition(Position.Time);
+            PlaySpeedChanged += PlaybackView_PlaySpeedChanged;
+        }
+
+        private void PlaybackView_PlaySpeedChanged(double speed)
+        {
+            VideoElement.SpeedRatio = speed;
         }
 
         private void RenderPreviewOnVideo(object sender, RenderingVideoEventArgs e)
