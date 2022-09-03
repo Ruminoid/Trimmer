@@ -77,6 +77,10 @@ namespace Ruminoid.Trimmer.Dialogs
             _data = null;
             return data;
         }
+        public static bool GetIsDualLanguage()
+        {
+            return (bool)Current.Dual_languageSwitch.IsChecked;
+        }
 
         #endregion
 

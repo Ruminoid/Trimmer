@@ -182,9 +182,19 @@ namespace Ruminoid.Trimmer.Models
 
         #region ItemOperations
 
-        public void AddLyrics(string lyrics)
+        public void AddLyrics(string lyrics, bool isDualLanguage = false)
         {
-            AddLyrics(lyrics.Split('\n'));
+            if(isDualLanguage)
+            {
+                AddLyrics(lyrics.Split('\n').Where((x, index) =>
+                {
+                    return index % 2 == 0;
+                }).ToArray());
+            }
+            else
+            {
+                AddLyrics(lyrics.Split('\n'));
+            }
         }
 
         public void AddLyrics(string[] lyrics)

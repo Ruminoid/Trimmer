@@ -29,7 +29,7 @@ namespace Ruminoid.Trimmer.Views
             EditLineDialog.ShowAddDialog();
             string data = EditLineDialog.GetData();
             if (string.IsNullOrEmpty(data)) return;
-            LrcModel.Current.AddLyrics(data);
+            LrcModel.Current.AddLyrics(data, EditLineDialog.GetIsDualLanguage());
         }
 
         private void CanExecute(object sender, CanExecuteRoutedEventArgs e)
