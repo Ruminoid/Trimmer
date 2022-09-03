@@ -186,9 +186,10 @@ namespace Ruminoid.Trimmer.Models
         {
             if(isDualLanguage)
             {
-                AddLyrics(lyrics.Split('\n').Where((x, index) =>
+                lyrics = lyrics.Replace("\r", "");
+                AddLyrics(lyrics.Split('\n').Where(x => string.IsNullOrEmpty(x) is false).ToList().Where((x, index) =>
                 {
-                    return index % 2 == 0;
+                    return index % 2 == 0 ;
                 }).ToArray());
             }
             else
@@ -311,6 +312,11 @@ namespace Ruminoid.Trimmer.Models
             if (mIndex == -1) decreaseIndex = false;
             Current.Items.Remove(line);
             if (decreaseIndex) GlobalIndex -= oldCount;
+        }
+
+        public void ClearAll()
+        {
+            Current.Items.Clear();
         }
 
         #endregion
